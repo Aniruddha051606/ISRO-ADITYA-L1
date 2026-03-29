@@ -12,8 +12,7 @@ USER_PASS = "@ZAEusDkYtVw2KV"
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
 LOG_FILE = os.path.join(PROJECT_DIR, "logs", "extraction.log")
-PROGRESS_FILE = os.path.join(PROJECT_DIR, "logs", "progress.txt") # Tracks our state
-
+PROGRESS_FILE = os.path.join(PROJECT_DIR, "logs", "progress.txt")
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,

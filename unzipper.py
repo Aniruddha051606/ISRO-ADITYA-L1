@@ -5,11 +5,10 @@ import shutil
 import time
 
 # --- CONFIGURATION ---
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIP_DIR = os.path.join(PROJECT_DIR, "data")
 MASTER_DIR = os.path.join(PROJECT_DIR, "master_archive")
 LOG_FILE = os.path.join(PROJECT_DIR, "logs", "unzipper.log")
-
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,

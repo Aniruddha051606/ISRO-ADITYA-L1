@@ -5,14 +5,18 @@ import matplotlib.pyplot as plt
 from astropy.io import fits
 import logging
 
-# --- CONFIGURATION ---
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 MASTER_DIR = os.path.join(PROJECT_DIR, "master_archive")
 OUTPUT_IMG_DIR = os.path.join(PROJECT_DIR, "processed_images")
 CSV_OUTPUT_PATH = os.path.join(PROJECT_DIR, "aditya_l1_catalog.csv")
+LOG_FILE = os.path.join(PROJECT_DIR, "logs", "process_fits.log")
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 def process_new_fits():
     os.makedirs(OUTPUT_IMG_DIR, exist_ok=True)
     
