@@ -1,0 +1,13 @@
+# Ignore Data and Logs
+data/
+master_archive/
+processed_images/
+logs/
+*.log
+*.zip
+
+# Ignore Python Caches and Environments
+__pycache__/
+*.pyc
+venv/
+.venv/
